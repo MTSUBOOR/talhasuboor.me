@@ -1,7 +1,7 @@
   
     $(document).on('click', function(event) {
       if ($(event.target).has('.modal-content').length) {
-        $(".modal").hide();
+        closeModal();
       }
     });
   function openModal() {
@@ -12,6 +12,7 @@
   }
 
   function closeModal() {
+    clearSlides();
     document.getElementsByTagName("BODY")[0].style.removeProperty('overflow');
     document.getElementById('myModal').style.display = "none";
     console.log('closeModal');
@@ -34,7 +35,7 @@
 
     var slides = {
       "1": ["Images/LS_01.jpg", "Images/LS_02.jpg", "Images/LS_03.jpg", "Images/LS_04.jpg" ],
-      "2": ["Images/Privaseable-blur.jpg", "Images/privaseeable-scramble.jpg", "Images/privaseeableUI.png" ],
+      "2": ["Images/Privaseable-blur.JPG", "Images/privaseeable-scramble.JPG", "Images/privaseeableUI.png" ],
       "3": ["Images/bugsndaffy.jpg", "Images/garfieldb.jpg", "Images/shadecar.jpg", "Images/xhatchcar.jpg" ]
     };
     var modal_num = modalID.getAttribute('data-modal');
