@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Fullscreen Layout with Page Transitions</title>
+	<meta name="description" content="Fullscreen Layout with Page Transitions" />
+	<meta name="keywords" content="fullscreen layout, boxes, responsive, page transitions, css transitions, jquery, portfolio, template" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="../favicon.ico"> 
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="js/slideshow.js"></script>
+
+</head>
+<body>
+	<div id="myModal" class="modal">
+		<div class="modal-content" id="modal_content">
+			<a class="elbutton prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="elbutton next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+	</div>
+	<div class="container">	
+		<div id="bl-main" class="bl-main">
+			<section>
+				<div class="bl-box">
+					<h2 class="bl-icon bl-icon-about">About</h2>
+				</div>
+				<div class="bl-content">
+					<h2>About Me</h2>
+					<p>I'm Talha Suboor, a second year computer science student at the University of Waterloo. "Curious" would be the word I would choose to describe myself, if I had to choose only one. The discovery and understanding of new things is what drives me, and as such I am constantly questioning everything around me. Learning helps me see the world from different perspectives, and helps me appreciate the little things in life, so I try to do a lot of it. This site is a small glimpse into who I am, and I hope to expand on it as time goes on. </p>
+				</div>
+				<span class="bl-icon bl-icon-close"></span>
+			</section>
+			<section id="bl-work-section">
+				<div class="bl-box">
+					<h2 class="bl-icon bl-icon-works">Works</h2>
+				</div>
+				<div class="bl-content">
+					<h2>My Works</h2>
+					<p>Here are some of my personal projects!</p>
+					
+					<ul id="bl-work-items">
+						<li data-panel="panel-1"><a href="#"><img src="images/IMDBNEtflix.png" /></a></li>
+						<li data-panel="panel-2"><a href="#"><img src="images/PrivaSeeable2.png" /></a></li>
+						<li data-panel="panel-3"><a href="#"><img src="images/xhatchcar.jpg" /></a></li>
+					</ul>
+					<p>More of my work can be found on my <u><a target = "_blank"href="https://github.com/mtsuboor">github</a></u></p>
+				</div>
+				<span class="bl-icon bl-icon-close"></span>
+			</section>
+			<section>
+				<div class="bl-box">
+					<h2 class="bl-icon bl-icon-blog">Blog</h2>
+				</div>
+				<div class="bl-content">
+					<h2>My Musings</h2>
+					<article>
+						<h3>Pilot Post | April 29th 2020</h3>
+						<p>So I finally published my website, it's been in the works for a long time but now it's here! You may be wondering why I would bother having a blog section on my site. Why not use medium, or some other similar service? That's because this is more of a way for me to organise my own thoughts, and to keep a record of my life. I'm a critical person, and so I've developed a bad habit of fixating on my mistakes, and downplaying my accomplishments. On top of that I can be a little forgetful, so I think having a sort of digital record of my thoughts, feelings, and events from my life, would be something I could really benefit from. Sort of like a gift to my future self.  </p>
+					</article>
+				</div>
+				<span class="bl-icon bl-icon-close"></span>
+			</section>
+			<section>
+				<div class="bl-box">
+					<h2 class="bl-icon bl-icon-contact">Contact</h2>
+				</div>
+				<div id ="contactp"class="bl-content">
+					<h2>Get in touch</h2>
+
+					<p>
+						If you'd like to get in contact with me for any reason, my information is down below!<br> P.S. actual contact form coming soon.
+					</p>
+					<a href="https://github.com/mtsuboor" style="font-weight: none" target="_blank" class="fab fa-github fa-2x">    github.com/mtsuboor</a> 
+					<br>
+					<a  href="mailto:someone@example.com" style="font-weight: none" target = "_blank"class="fas fa-envelope fa-2x">   mtsuboor@uwaterloo.ca</a>
+					<br> 	
+					<a href = "resume.pdf" target = "_blank" style="font-weight: none" class="fas fa-file-alt fa-2x"> <span class="resume"> click to open resume</span></a>
+
+				</div>
+				<span class="bl-icon bl-icon-close"></span>
+			</section>
+			<!-- Panel items for the works -->
+			<div class="bl-panel-items" id="bl-panel-work-items">
+				<div data-panel="panel-1">
+					<div>
+						<a href="https://imgur.com/a/PNm7N05"><img src="images/imdbnetflixss.jpg" class="cursor"/></a>
+
+						<br/>
+						<h3>IMDB Netflix Augmenter</h3>
+
+						<p>*click image above to see demonstration of chrome extension* <br> <br> Netflix is the largest video streaming service in the world, and yet its default "video appraisal method" is terrible. Netflix used to give an objective star-based rating, aggregated from it's users input. Now it just tries to guess what you like. This is why I made the IMDB Netflix Augmenter. It adds IMDB rating data directly in Netflix's DOM, in the appropriate spots, so you don't have to waste your energy with even a single extra click. <br><br>
+						To make it, first I spent a lot of time inspecting Netflix's html, and seeing where they may have stored data I can use in a database search to extract ratings. However, it turns out (as far as I was able to tell) that the only place where the name and year of a Netflix video is in sections of the DOM that are initially hidden, until the user tries to access them. So I decided I would use a Mutation Observer to detect when a user opens a section of the DOM that was previosuly hidden, and if it has the info I need, I made made a HTTPRequest to the OMDB API (it's pretty much a wrapper on top of multiple movie databases), and then add it to the info page of the movie/tv-show <br><br> This was a really fun project to work on! I had never used a RESTful API, or manipulated the DOM before. I learned alot about javascript and about how websites are structured, and this project inspired me to learn jQuery! I didn't actually use it in this project, but since jQuery is great for manipulating the DOM, and I enjoyed doing that, I decided to give it a whirl, and I ended up using it in the making of this website! <br><br> There's lots I still want to do to improve the chrome extension, such as making rating display overtop of all thumbnails as soon as Netflix loads, and fixing a few minor bugs, for which I've figured out the cause but not resolved yet. It should be on the chrome store soon (I've submitted it for review), and I hope you enjoy it.</p>
+					</div>
+				</div>
+				<div data-panel="panel-2" >
+					<div>
+						<img src="images/PrivaSeeable2Dem.png" id="modal-2" data-modal="2" onclick="fillSlides(this); openModal(); currentSlide(1); " class="cursor"/>
+						<br>
+						<h3>PrivaSEEable!</h3>
+						<p>It's a chrome extension that was built to maintain a user’s privacy in public settings. My team and I used Javascript to create this chrome extension that takes advantage of CSS elements to maintain user privacy by obscuring their screen’s text from potential onlookers. We implemented a “blur” feature that allows the user to blur onscreen text and seletively unblur text by holding shift and clicking on a piece of text. We implemented a “scramble” feature as well which inserts random words in between onscreen text.<br><br>PrivaSEEable at it's core is an immediate solution to privacy, that concerns every person who uses technology in public. Most people don't necessarily understand cryptocurrency, nor is it widely used yet, end to end encryption and how it keeps them safe. We don't deny that these are the technologies of the future, and will help shape what privacy and security will look like moving forward, but the average person will not want to go out of their way to learn, and use a solution for a problem they don't understand. PrivaSEEable acts as a filter from the prying eyes of all those around us, that we all feel gazing at us and out screens as we try to orient and navigate in this digital age. We will continue to add more options for filters to your text on your screens, so that users can pick between options that allow them to read their private text, but not strangers. As well as adding more customization, so that the user can be more comfortable to these filters, and it would increase the discomfort that the "peepers" feel when trying to invade your privacy. <br> <br> Below you can find a link to the github, and a youtube demonstration of the app.</p>
+						<a href="https://www.youtube.com/watch?v=azYLz9VGcwo&feature=emb_title"> Click me to see the demonstration</a>
+						<br>
+						<br>
+
+						<a href="https://github/mtsuboor/privaseeable">Github Link</a>
+						<br>
+						<br>
+
+					</div>
+				</div>
+				<div data-panel="panel-3">
+					<div>
+						<img src="images/bugsndaffy.jpg" id="modal-3" data-modal="3" onclick="fillSlides(this); openModal(); currentSlide(1); " class="cursor"/>
+						<br>
+						<h3>Archived Artwork</h3>
+						<p>I always loved drawing when I was young, but aside from doodling on my notebooks, I stopped doing it after high school. Since university first began, the challenges I have faced have created a new respect for the arts. I even found that expressing my creativity in art, helped me visualize and solve programming problems better. I have started practicing art again, in my spare time, and will be posting any significant pieces I make here. As such it felt fitting to make one post with some of my favourite past projects, as I begin to explore my creativity again. </p>
+					</div>
+				</div>
+				<nav>
+					<span class="bl-next-work">&gt; Next Project</span>
+					<span class="bl-icon bl-icon-close"></span>
+				</nav>
+
+
+			</div>
+		</div>
+	</div><!-- /container -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/boxlayout.js"></script>
+	<script>
+		$(function() {
+			Boxlayout.init();
+		});
+	</script>
+</body>
+</html>
