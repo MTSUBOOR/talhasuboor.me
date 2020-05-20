@@ -34,9 +34,9 @@
     var dcontainer = document.createElement('dot_content');
 
     var slides = {
-      "1": ["Images/LS_01.jpg", "Images/LS_02.jpg", "Images/LS_03.jpg", "Images/LS_04.jpg" ],
-      "2": ["Images/Privaseable-blur.JPG", "Images/privaseeable-scramble.JPG", "Images/privaseeableUI.png" ],
-      "3": ["Images/bugsndaffy.jpg", "Images/garfieldb.jpg", "Images/shadecar.jpg", "Images/xhatchcar.jpg" ]
+      "1": ["images/LS_01.jpg", "images/LS_02.jpg", "images/LS_03.jpg", "images/LS_04.jpg" ],
+      "2": ["images/Privaseable-blur.JPG", "images/privaseeable-scramble.JPG", "images/privaseeableUI.png" ],
+      "3": ["images/bugsndaffy.jpg", "images/garfieldb.jpg", "images/shadecar.jpg", "images/xhatchcar.jpg" ]
     };
     var modal_num = modalID.getAttribute('data-modal');
     //alert(slides[modal_num].length);
