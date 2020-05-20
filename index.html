@@ -88,54 +88,55 @@
 			<div class="bl-panel-items" id="bl-panel-work-items">
 				<div data-panel="panel-1">
 					<div>
-						<a href="https://imgur.com/a/PNm7N05"><img src="images/imdbnetflixss.JPG" class="cursor"/></a>
-
-						<br/>
-						<h3>IMDB Netflix Augmenter</h3>
+						<h3 style="">IMDB Netflix Enhancer</h3>
+						<a href="https://imgur.com/a/PNm7N05"><img  src="images/imdbnetflixss.JPG" class="hover-shadow cursor"/></a>
 
 						<p>*click image above to see demonstration of chrome extension* <br> <br> Netflix is the largest video streaming service in the world, and yet its default "video appraisal method" is terrible. Netflix used to give an objective star-based rating, aggregated from it's users input. Now it just tries to guess what you like. This is why I made the IMDB Netflix Augmenter. It adds IMDB rating data directly in Netflix's DOM, in the appropriate spots, so you don't have to waste your energy with even a single extra click. <br><br>
-						To make it, first I spent a lot of time inspecting Netflix's html, and seeing where they may have stored data I can use in a database search to extract ratings. However, it turns out (as far as I was able to tell) that the only place where the name and year of a Netflix video is in sections of the DOM that are initially hidden, until the user tries to access them. So I decided I would use a Mutation Observer to detect when a user opens a section of the DOM that was previosuly hidden, and if it has the info I need, I made made a HTTPRequest to the OMDB API (it's pretty much a wrapper on top of multiple movie databases), and then add it to the info page of the movie/tv-show <br><br> This was a really fun project to work on! I had never used a RESTful API, or manipulated the DOM before. I learned alot about javascript and about how websites are structured, and this project inspired me to learn jQuery! I didn't actually use it in this project, but since jQuery is great for manipulating the DOM, and I enjoyed doing that, I decided to give it a whirl, and I ended up using it in the making of this website! <br><br> There's lots I still want to do to improve the chrome extension, such as making rating display overtop of all thumbnails as soon as Netflix loads, and fixing a few minor bugs, for which I've figured out the cause but not resolved yet. It should be on the chrome store soon (I've submitted it for review), and I hope you enjoy it.</p>
+							To make it, first I spent a lot of time inspecting Netflix's html, and seeing where they may have stored data I can use in a database search to extract ratings. However, it turns out (as far as I was able to tell) that the only place where the name and year of a Netflix video is in sections of the DOM that are initially hidden, until the user tries to access them. So I decided I would use a Mutation Observer to detect when a user opens a section of the DOM that was previosuly hidden, and if it has the info I need, I made made a HTTPRequest to the OMDB API (it's pretty much a wrapper on top of multiple movie databases), and then add it to the info page of the movie/tv-show <br><br> This was a really fun project to work on! I had never used a RESTful API, or manipulated the DOM before. I learned alot about javascript and about how websites are structured, and this project inspired me to learn jQuery! I didn't actually use it in this project, but since jQuery is great for manipulating the DOM, and I enjoyed doing that, I decided to give it a whirl, and I ended up using it in the making of this website! <br><br> There's lots I still want to do to improve the chrome extension, such as making rating display overtop of all thumbnails as soon as Netflix loads, and fixing a few minor bugs, for which I've figured out the cause but not resolved yet. It should be on the chrome store soon (I've submitted it for review), and I hope you enjoy it. <br> <br> Below you can find a link to the github for this project.</p></p>
+
+							<a href="https://github.com/MTSUBOOR/IMDB_Netflix_Enhancer" target="_blank">Github Link</a>
+							<br>
+							<br>
+						</div>
 					</div>
-				</div>
-				<div data-panel="panel-2" >
-					<div>
-						<img src="images/PrivaSeeable2Dem.png" id="modal-2" data-modal="2" onclick="fillSlides(this); openModal(); currentSlide(1); " class="cursor"/>
-						<br>
-						<h3>PrivaSEEable!</h3>
-						<p>It's a chrome extension that was built to maintain a user’s privacy in public settings. My team and I used Javascript to create this chrome extension that takes advantage of CSS elements to maintain user privacy by obscuring their screen’s text from potential onlookers. We implemented a “blur” feature that allows the user to blur onscreen text and seletively unblur text by holding shift and clicking on a piece of text. We implemented a “scramble” feature as well which inserts random words in between onscreen text.<br><br>PrivaSEEable at it's core is an immediate solution to privacy, that concerns every person who uses technology in public. Most people don't necessarily understand cryptocurrency, nor is it widely used yet, end to end encryption and how it keeps them safe. We don't deny that these are the technologies of the future, and will help shape what privacy and security will look like moving forward, but the average person will not want to go out of their way to learn, and use a solution for a problem they don't understand. PrivaSEEable acts as a filter from the prying eyes of all those around us, that we all feel gazing at us and out screens as we try to orient and navigate in this digital age. We will continue to add more options for filters to your text on your screens, so that users can pick between options that allow them to read their private text, but not strangers. As well as adding more customization, so that the user can be more comfortable to these filters, and it would increase the discomfort that the "peepers" feel when trying to invade your privacy. <br> <br> Below you can find a link to the github, and a youtube demonstration of the app.</p>
-						<a href="https://www.youtube.com/watch?v=azYLz9VGcwo&feature=emb_title"> Click me to see the demonstration</a>
-						<br>
-						<br>
+					<div data-panel="panel-2" >
+						<div>
+							<h3>PrivaSEEable!</h3>
+							<img src="images/PrivaSeeable2Dem.png" id="modal-2" data-modal="2" onclick="fillSlides(this); openModal(); currentSlide(1); " class="cursor hover-shadow"/>
 
-						<a href="https://github/mtsuboor/privaseeable">Github Link</a>
-						<br>
-						<br>
+							<p>It's a chrome extension that was built to maintain a user’s privacy in public settings. My team and I used Javascript to create this chrome extension that takes advantage of CSS elements to maintain user privacy by obscuring their screen’s text from potential onlookers. We implemented a “blur” feature that allows the user to blur onscreen text and seletively unblur text by holding shift and clicking on a piece of text. We implemented a “scramble” feature as well which inserts random words in between onscreen text.<br><br>PrivaSEEable at it's core is an immediate solution to privacy, that concerns every person who uses technology in public. Most people don't necessarily understand cryptocurrency, nor is it widely used yet, end to end encryption and how it keeps them safe. We don't deny that these are the technologies of the future, and will help shape what privacy and security will look like moving forward, but the average person will not want to go out of their way to learn, and use a solution for a problem they don't understand. PrivaSEEable acts as a filter from the prying eyes of all those around us, that we all feel gazing at us and out screens as we try to orient and navigate in this digital age. We will continue to add more options for filters to your text on your screens, so that users can pick between options that allow them to read their private text, but not strangers. As well as adding more customization, so that the user can be more comfortable to these filters, and it would increase the discomfort that the "peepers" feel when trying to invade your privacy. <br> <br> Below you can find a link to the github, and a youtube demonstration of the app.</p>
+							<a href="https://www.youtube.com/watch?v=azYLz9VGcwo&feature=emb_title" target="_blank"> Click me to see the demonstration</a>
+							<br>
+							<br>
+							<a href= "https://github.com/MTSUBOOR/PrivaSEEable" target="_blank">Github Link</a>
+							<br>
+							<br>
 
+						</div>
 					</div>
-				</div>
-				<div data-panel="panel-3">
-					<div>
-						<img src="images/bugsndaffy.jpg" id="modal-3" data-modal="3" onclick="fillSlides(this); openModal(); currentSlide(1); " class="cursor"/>
-						<br>
-						<h3>Archived Artwork</h3>
-						<p>I always loved drawing when I was young, but aside from doodling on my notebooks, I stopped doing it after high school. Since university first began, the challenges I have faced have created a new respect for the arts. I even found that expressing my creativity in art, helped me visualize and solve programming problems better. I have started practicing art again, in my spare time, and will be posting any significant pieces I make here. As such it felt fitting to make one post with some of my favourite past projects, as I begin to explore my creativity again. </p>
+					<div data-panel="panel-3">
+						<div>
+							<h3>Archived Artwork</h3>
+							<img src="images/bugsndaffy.jpg" id="modal-3" data-modal="3" onclick="fillSlides(this); openModal(); currentSlide(1); " class="cursor hover-shadow"/>
+
+							<p>I always loved drawing when I was young, but aside from doodling on my notebooks, I stopped doing it after high school. Since university first began, the challenges I have faced have created a new respect for the arts. I even found that expressing my creativity in art, helped me visualize and solve programming problems better. I have started practicing art again, in my spare time, and will be posting any significant pieces I make here. As such it felt fitting to make one post with some of my favourite past projects, as I begin to explore my creativity again. </p>
+						</div>
 					</div>
+					<nav>
+						<span class="bl-next-work">&gt; Next Project</span>
+						<span class="bl-icon bl-icon-close"></span>
+					</nav>
+
+
 				</div>
-				<nav>
-					<span class="bl-next-work">&gt; Next Project</span>
-					<span class="bl-icon bl-icon-close"></span>
-				</nav>
-
-
 			</div>
-		</div>
-	</div><!-- /container -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="js/boxlayout.js"></script>
-	<script>
-		$(function() {
-			Boxlayout.init();
-		});
-	</script>
-</body>
-</html>
+		</div><!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/boxlayout.js"></script>
+		<script>
+			$(function() {
+				Boxlayout.init();
+			});
+		</script>
+	</body>
+	</html>
